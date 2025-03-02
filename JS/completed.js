@@ -1,5 +1,5 @@
 const completeBtns = document.querySelectorAll(".complete-btn");
-completeBtns.forEach(function(completeBtn){
+for(const completeBtn of completeBtns){
     completeBtn.addEventListener("click",function(event){
         alert("Board updated successfully");
 
@@ -38,4 +38,4 @@ completeBtns.forEach(function(completeBtn){
         historyContainer.appendChild(historyItem);
 
     })
-})
+}
