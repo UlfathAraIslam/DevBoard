@@ -1,42 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Blog</title>
-        <!-- Google Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
-          rel="stylesheet"
-        />
-        <!-- daisy UI -->
-        <link
-          href="https://cdn.jsdelivr.net/npm/daisyui@5"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <!-- custom css -->
-        <style type="text/tailwindcss">
-          @theme {
-            --font-poppins: Poppins, serif;
-          }
-        </style>
-      </head>
-<body>
-<!-- navbar -->
-<div class="navbar bg-base-100 shadow-sm rounded mb-8">
-    <div class="navbar-start">
-      <img src="./assets/logo.png" alt="" />
-      <a class="text-3xl font-light ml-5"
-        >Dev <span class="font-extrabold">Board</span></a
-      >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- custom css -->
+    <style type="text/tailwindcss">
+      @theme {
+        --font-poppins: Poppins, serif;
+      }
+    </style>
+  </head>
+  <body class="font-poppins bg-blue-50 p-5">
+    <div class="container mx-auto">
+      <!-- navbar -->
+      <div class="navbar bg-base-100 shadow-sm rounded mb-8">
+        <div class="navbar-start">
+          <img src="./assets/logo.png" alt="" />
+          <a class="text-3xl font-light ml-5"
+            >Dev <span class="font-extrabold">Board</span></a
+          >
+        </div>
+        <div class="navbar-end flex gap-8">
+          <a href="index.html"
+            ><button class="btn btn-primary">Back to Desk</button></a
+          >
+        </div>
+      </div>
+      <!-- main -->
+       <main>
+        <h4 class="font-bold text-center mb-5">Blogs</h4>
+        <div class="space-y-5">
+            <div class="card bg-white p-2">
+                <h5 class="font-semibold">Question-1: What are the different ways to select an element in the DOM?
+                </h5>
+                <hr class="border border-dashed mt-5 text-blue-50">
+                <div class="text-gray-500 p-2">
+                    <ul>
+                        <li>getElementById: Selects an element by its id.
+                        </li>
+                        <li>getElementsByClassName: Selects elements by their class.
+                        </li>
+                        <li>getElementsByTagName: Selects elements by their tag (like div, p).
+                        </li>
+                        <li>querySelector: Selects the first element that matches a CSS selector.
+                        </li>
+                        <li>querySelectorAll: Selects all elements that match a CSS selector.
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="card bg-white p-2">
+                <h5 class="font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?
+                </h5>
+                <hr class="border border-dashed mt-5 text-blue-50">
+                <div class="text-gray-500 p-2">
+                    <p>innerHTML: Gets or sets the HTML content inside an element</p>
+                    <p>innerText: Gets or sets the visible text inside an element, excluding HTML tags</p>
+                    <p>textContent: Similar to innerText, but it also includes hidden text.</p>
+                </div>
+            </div>
+            <div class="card bg-white p-2">
+                <h5 class="font-semibold">Question-3: What is event delegation in the DOM?
+                </h5>
+                <hr class="border border-dashed mt-5 text-blue-50">
+                <p class="text-gray-500 p-2">
+                    Event delegation is a technique where you attach an event listener to a parent element instead of multiple child elements. This allows events on child elements to be handled by the parent, making it more efficient.
+                </p>
+            </div>
+            <div class="card bg-white p-2">
+                <h5 class="font-semibold">Question-4: What is event bubbling in the DOM?
+                </h5>
+                <hr class="border border-dashed mt-5 text-blue-50">
+                <p class="text-gray-500 p-2">Event bubbling is when an event starts at the target element and bubbles up through its parent elements.</p>
+            </div>
+            <div class="card bg-white p-2">
+                <h5 class="font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?
+                </h5>
+                <hr class="border border-dashed mt-5 text-blue-50">
+                <div class="text-gray-500 p-2">
+                    <p>Create an element: Use document.createElement("tag") to create an element;</p>
+                    <p>Add an element: Use parentElement.appendChild() to add the created element.</p>
+                    <p>Remove an element: Use parentElement.removeChild() to remove an element.</p>
+                </div>
+            </div>
+        </div>
+       </main>
     </div>
-    <div class="navbar-end flex gap-8">
-        <a href="index.html"><button class="btn btn-primary">Back to Desk</button></a>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
