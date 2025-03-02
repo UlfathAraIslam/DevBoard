@@ -4,17 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevBoard</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisy UI -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- custom css -->
+    <style type="text/tailwindcss">
+      @theme {
+        --font-poppins: Poppins, serif;
+        --font-sora: Sora, serif;
+        --color-primary: #f9df8a;
+        --background-light: #fff9f4;
+        --background-yellow: #f9df8a;
+      }
+    </style>
   </head>
-  <body class="bg-blue-50 p-5">
+  <body class="font-poppins bg-blue-50 p-5">
     <div class="container mx-auto">
       <!-- navbar -->
-      <div class="navbar bg-base-100 shadow-sm rounded">
+      <div class="navbar bg-base-100 shadow-sm rounded mb-8">
         <div class="navbar-start">
           <img src="./assets/logo.png" alt="" />
           <a class="text-3xl font-light ml-5"
@@ -31,6 +49,190 @@
           <img class="cursor-pointer" src="./assets/theme-btn.png" alt="" />
         </div>
       </div>
+      <!-- main section -->
+      <section class="flex gap-5 rounded">
+        <!-- main -->
+        <!-- left -->
+        <main class="bg-white flex-1 h-full rounded-lg p-8">
+          <!-- header -->
+          <section class="flex gap-5">
+            <!-- task assigned -->
+            <div class="flex items-center p-8 gap-5 bg-blue-50 rounded-lg">
+              <div class="p-3 bg-white rounded-full">
+                <img class="" src="./assets/checkbox.png" alt="" />
+              </div>
+              <div>
+                <p>Task Assigned</p>
+                <p class="text-2xl font-bold">05</p>
+              </div>
+            </div>
+            <!-- Discover Something New -->
+            <div
+              class="flex-1 items-center p-5 bg-linear-to-r from-blue-600 to-indigo-300 rounded-lg"
+            >
+              <div>
+                <img src="./assets/board.png" alt="" />
+              </div>
+              <p>Discover Something New Today!</p>
+            </div>
+            <!-- Date -->
+            <div class="flex items-center p-8 gap-5 bg-blue-50 rounded-lg">
+              <div class="p-3 bg-white rounded-full">
+                <img class="" src="./assets/calender.png" alt="" />
+              </div>
+              <div>
+                <p>Wed ,</p>
+                <p class="text-2xl font-bold">Jul 28 2025</p>
+              </div>
+            </div>
+          </section>
+          <hr class="border border-dashed mt-5 text-blue-50" />
+          <!-- card container -->
+          <!-- todo: allignment -->
+          <div class="p-8 grid grid-cols-3 gap-5">
+            <!-- card -->
+            <!-- card 1 -->
+            <div class="card bg-blue-50 shadow-sm p-8">
+              <div class="space-y-5">
+                <button class="btn border-none font-normal bg-white">ShopEase</button>
+                <h2 class="card-title font-medium">Fix Mobile Button Issue</h2>
+                <p class="bg-white font-regular text-gray-500 p-1 rounded-lg line-clamp-2 overflow-hidden">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+                <hr class="border-t border-dashed border-blue-200 mt-2" />
+                <div class="flex justify-between">
+                  <div>
+                    <p class="text-slate-500 text-sm">Deadline</p>
+                    <p>21 March 2025</p>
+                  </div>
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="card bg-blue-50 shadow-sm p-8">
+              <div class="space-y-5">
+                <button class="btn border-none bg-white font-normal">CloudSync</button>
+                <h2 class="card-title font-medium">Add Dark Mode</h2>
+                <p class="bg-white font-regular text-gray-500 p-1 rounded-lg line-clamp-2 overflow-hidden">
+                  Store the user's preference in localStorage, update CSS
+                  variables dynamically, and apply a smooth transition effect.
+                </p>
+                <hr class="border-t border-dashed border-blue-200 mt-2" />
+                <div class="flex justify-between">
+                  <div>
+                    <p class="text-slate-500 text-sm">Deadline</p>
+                    <p>21 March 2025</p>
+                  </div>
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="card bg-blue-50 shadow-sm p-8">
+              <div class="space-y-5">
+                <button class="btn border-none bg-white font-normal">SwiftPay</button>
+                <h2 class="card-title font-medium">Optimize  Home page </h2>
+                <p class="bg-white font-regular text-gray-500 p-1 rounded-lg line-clamp-2 overflow-hidden">
+                    Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                    and ensure onClick works properly
+                </p>
+                <hr class="border-t border-dashed border-blue-200 mt-2" />
+                <div class="flex justify-between">
+                  <div>
+                    <p class="text-slate-500 text-sm">Deadline</p>
+                    <p>21 March 2025</p>
+                  </div>
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div class="card bg-blue-50 shadow-sm p-8">
+              <div class="space-y-5">
+                <button class="btn border-none bg-white font-normal">Meta</button>
+                <h2 class="card-title font-medium">Add new emoji 🤲</h2>
+                <p class="bg-white font-regular text-gray-500 p-1 rounded-lg line-clamp-2 overflow-hidden">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+                <hr class="border-t border-dashed border-blue-200 mt-2" />
+                <div class="flex justify-between">
+                  <div>
+                    <p class="text-slate-500 text-sm">Deadline</p>
+                    <p>21 March 2025</p>
+                  </div>
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <!-- card 5 -->
+            <div class="card bg-blue-50 shadow-sm p-8">
+              <div class="space-y-5">
+                <button class="btn border-none bg-white font-normal">Google LLC</button>
+                <h2 class="card-title font-medium">Integrate OpenAI API</h2>
+                <p class="bg-white font-regular text-gray-500 p-1 rounded-lg line-clamp-2 overflow-hidden">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+                <hr class="border-t border-dashed border-blue-200 mt-2" />
+                <div class="flex justify-between">
+                  <div>
+                    <p class="text-slate-500 text-sm">Deadline</p>
+                    <p>21 March 2025</p>
+                  </div>
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <!-- card 6 -->
+            <div class="card bg-blue-50 shadow-sm p-8">
+              <div class="space-y-5">
+                <button class="btn border-none bg-white font-normal">Glassdoar</button>
+                <h2 class="card-title font-medium">Improve Job searching</h2>
+                <p class="bg-white font-regular text-gray-500 p-1 rounded-lg line-clamp-2 overflow-hidden">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+                <hr class="border-t border-dashed border-blue-200 mt-2" />
+                <div class="flex justify-between">
+                  <div>
+                    <p class="text-slate-500 text-sm">Deadline</p>
+                    <p>21 March 2025</p>
+                  </div>
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- right sidebar -->
+        <section class="bg-white flex flex-col gap-5 rounded-lg p-3">
+          <div class="flex flex-col items-center gap-2">
+            <div class="flex gap-3">
+              <img src="./assets/activity.png" alt="" />
+              <p>Activity Log</p>
+            </div>
+            <button class="btn bg-blue-600 text-white text-sm font-normal">
+              Clear History
+            </button>
+          </div>
+          <hr class="border border-dashed text-blue-50" />
+          <div class="bg-blue-50 rounded-lg p-3">
+            You have Complete The Task Add <br />
+            Dark Mode at 12:48:15 PM
+          </div>
+          <div class="bg-blue-50 rounded-lg p-3">
+            You have Complete The Task Add <br />
+            Dark Mode at 12:48:15 PM
+          </div>
+        </section>
+      </section>
     </div>
   </body>
 </html>
