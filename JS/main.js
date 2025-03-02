@@ -8,13 +8,13 @@ completeBtns.forEach(function(completeBtn){
 
         const assignedTaskCount = document.getElementById("assigned-task-count").innerText;
         let convertedAssignedTaskCount = parseInt(assignedTaskCount);
-
         if (assignedTaskCount > 0){
             convertedAssignedTaskCount--;
         }
         // TODO: to show the last complete btn 2 alert
-        if (assignedTaskCount === 0){
+        if (convertedAssignedTaskCount === 0){
             alert("Congrats!! You have completed all the current tasks!")
+            console.log("congrats");
         }
 
         document.getElementById("assigned-task-count").innerText = convertedAssignedTaskCount;
