@@ -42,7 +42,7 @@
         <div class="navbar-end flex gap-8">
           <a class="btn bg-blue-50 border-none rounded-3xl p-6">
             <img src="./assets/checkbox.png" alt="" /><span
-              class="text-2xl font-bold"
+              id="complete-task-count" class="text-2xl font-bold"
               >23</span
             >
           </a>
@@ -63,7 +63,7 @@
               </div>
               <div>
                 <p>Task Assigned</p>
-                <p class="text-2xl font-bold">05</p>
+                <p id="assigned-task-count" class="text-2xl font-bold">06</p>
               </div>
             </div>
             <!-- Discover Something New -->
@@ -107,7 +107,7 @@
                     <p class="text-slate-500 text-sm">Deadline</p>
                     <p>21 March 2025</p>
                   </div>
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button class="btn btn-primary complete-btn">Completed</button>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@
                     <p class="text-slate-500 text-sm">Deadline</p>
                     <p>21 March 2025</p>
                   </div>
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button class="btn btn-primary complete-btn">Completed</button>
                 </div>
               </div>
             </div>
@@ -145,7 +145,7 @@
                     <p class="text-slate-500 text-sm">Deadline</p>
                     <p>21 March 2025</p>
                   </div>
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button class="btn btn-primary complete-btn">Completed</button>
                 </div>
               </div>
             </div>
@@ -165,7 +165,7 @@
                     <p class="text-slate-500 text-sm">Deadline</p>
                     <p>21 March 2025</p>
                   </div>
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button class="btn btn-primary complete-btn">Completed</button>
                 </div>
               </div>
             </div>
@@ -185,7 +185,7 @@
                     <p class="text-slate-500 text-sm">Deadline</p>
                     <p>21 March 2025</p>
                   </div>
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button class="btn btn-primary complete-btn">Completed</button>
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@
                     <p class="text-slate-500 text-sm">Deadline</p>
                     <p>21 March 2025</p>
                   </div>
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button class="btn btn-primary complete-btn">Completed</button>
                 </div>
               </div>
             </div>
@@ -223,16 +223,12 @@
             </button>
           </div>
           <hr class="border border-dashed text-blue-50" />
-          <div class="bg-blue-50 rounded-lg p-3">
-            You have Complete The Task Add <br />
-            Dark Mode at 12:48:15 PM
-          </div>
-          <div class="bg-blue-50 rounded-lg p-3">
-            You have Complete The Task Add <br />
-            Dark Mode at 12:48:15 PM
+          <!-- task complete history -->
+          <div id="task-complete-history" >
           </div>
         </section>
       </section>
     </div>
+    <script src="./JS/main.js"></script>
   </body>
 </html>
